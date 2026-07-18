@@ -1,0 +1,22 @@
+[
+ {"id":"q01","question":"What does RAG retrieve before generating an answer?","gold_answer":"Passages from a trusted corpus.","relevant_source":"data/corpus/rag_overview.md"},
+ {"id":"q02","question":"Why does RAG reduce unsupported answers?","gold_answer":"It supplies retrieved trusted passages to the language model.","relevant_source":"data/corpus/rag_overview.md"},
+ {"id":"q03","question":"What happens if the relevant passage is absent from top results?","gold_answer":"The answer cannot be grounded.","relevant_source":"data/corpus/rag_overview.md"},
+ {"id":"q04","question":"What chunk size is the stated starting point?","gold_answer":"700 characters.","relevant_source":"data/corpus/rag_overview.md"},
+ {"id":"q05","question":"What overlap is the stated starting point?","gold_answer":"120 characters.","relevant_source":"data/corpus/rag_overview.md"},
+ {"id":"q06","question":"Why is excessive overlap costly?","gold_answer":"It creates near-duplicate vectors and raises storage cost.","relevant_source":"data/corpus/rag_overview.md"},
+ {"id":"q07","question":"What can metadata filters narrow retrieval to?","gold_answer":"A trusted source, topic, or tenant.","relevant_source":"data/corpus/rag_overview.md"},
+ {"id":"q08","question":"What is FAISS?","gold_answer":"A vector similarity-search library.","relevant_source":"data/corpus/faiss_operations.md"},
+ {"id":"q09","question":"Which FAISS index performs exact inner-product search?","gold_answer":"IndexFlatIP.","relevant_source":"data/corpus/faiss_operations.md"},
+ {"id":"q10","question":"When does inner product equal cosine similarity?","gold_answer":"When vectors are normalized.","relevant_source":"data/corpus/faiss_operations.md"},
+ {"id":"q11","question":"How can a FAISS index be persisted?","gold_answer":"With write_index and loaded with read_index.","relevant_source":"data/corpus/faiss_operations.md"},
+ {"id":"q12","question":"Why is FAISS economical for lightly queried workloads?","gold_answer":"It can run on a small VM with local or attached block storage.","relevant_source":"data/corpus/faiss_operations.md"},
+ {"id":"q13","question":"What does the application own when using FAISS?","gold_answer":"Snapshots, replicas, access control, and rolling index updates.","relevant_source":"data/corpus/faiss_operations.md"},
+ {"id":"q14","question":"What index types reduce query work at larger scale?","gold_answer":"IVF or HNSW.","relevant_source":"data/corpus/faiss_operations.md"},
+ {"id":"q15","question":"What does Recall at k measure?","gold_answer":"Whether a relevant chunk occurs in the first k results.","relevant_source":"data/corpus/evaluation.html"},
+ {"id":"q16","question":"How is reciprocal rank calculated?","gold_answer":"One divided by the rank of the first relevant result.","relevant_source":"data/corpus/evaluation.html"},
+ {"id":"q17","question":"What does nDCG reward?","gold_answer":"Relevant items near the front of results.","relevant_source":"data/corpus/evaluation.html"},
+ {"id":"q18","question":"How is context precision calculated?","gold_answer":"Relevant retrieved chunks divided by retrieved chunks.","relevant_source":"data/corpus/evaluation.html"},
+ {"id":"q19","question":"What does faithfulness assess?","gold_answer":"Whether answer claims are supported by supplied context.","relevant_source":"data/corpus/evaluation.html"},
+ {"id":"q20","question":"Why measure faithfulness and answer relevance separately?","gold_answer":"A fluent answer may be unfaithful and a faithful answer may be incomplete.","relevant_source":"data/corpus/evaluation.html"}
+]
