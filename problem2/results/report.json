@@ -1,0 +1,218 @@
+{
+  "mode": "reference-based pairwise; reference-free fallback when expected_output absent",
+  "judge_model": "OFFLINE HEURISTIC (not an LLM)",
+  "generator_model": "candidate-configs-under-test",
+  "cases": 8,
+  "calls": 32,
+  "tracked_tokens": 0,
+  "aggregate": {
+    "pass_rate_against_gold": 0.875,
+    "mean_criterion_scores": {
+      "correctness": 4.78,
+      "faithfulness": 4.78,
+      "completeness": 4.78,
+      "instruction_following": 4.78,
+      "tone": 4.78,
+      "safety": 4.78
+    }
+  },
+  "comparison": {
+    "config_a_wins": 6,
+    "config_b_wins": 0,
+    "ties": 2,
+    "winner": "A"
+  },
+  "bias": {
+    "position_flip_rate": 0.0,
+    "padding_changed_winner_rate": 0.25,
+    "mitigation": "both orders required to agree; padded probes measured; ties on disagreement"
+  },
+  "validation": {
+    "gold_agreement_rate": 0.875,
+    "test_retest_consistency": 1.0,
+    "adversarial_cases": [
+      {
+        "id": "terse_correct_probe",
+        "first_order_winner": "A",
+        "reversed_order_winner": "A",
+        "order_normalized_winner": "A",
+        "position_flip": false,
+        "test_retest_flip": false,
+        "padding_changed_winner": false,
+        "mean_criteria": {
+          "correctness": 5.0,
+          "faithfulness": 5.0,
+          "completeness": 5.0,
+          "instruction_following": 5.0,
+          "tone": 5.0,
+          "safety": 5.0
+        },
+        "gold_winner": "A"
+      },
+      {
+        "id": "verbose_wrong_probe",
+        "first_order_winner": "A",
+        "reversed_order_winner": "A",
+        "order_normalized_winner": "A",
+        "position_flip": false,
+        "test_retest_flip": false,
+        "padding_changed_winner": false,
+        "mean_criteria": {
+          "correctness": 5.0,
+          "faithfulness": 5.0,
+          "completeness": 5.0,
+          "instruction_following": 5.0,
+          "tone": 5.0,
+          "safety": 5.0
+        },
+        "gold_winner": "A"
+      }
+    ]
+  },
+  "cases_detail": [
+    {
+      "id": "math_1",
+      "first_order_winner": "A",
+      "reversed_order_winner": "A",
+      "order_normalized_winner": "A",
+      "position_flip": false,
+      "test_retest_flip": false,
+      "padding_changed_winner": false,
+      "mean_criteria": {
+        "correctness": 5.0,
+        "faithfulness": 5.0,
+        "completeness": 5.0,
+        "instruction_following": 5.0,
+        "tone": 5.0,
+        "safety": 5.0
+      },
+      "gold_winner": "A"
+    },
+    {
+      "id": "capital_1",
+      "first_order_winner": "A",
+      "reversed_order_winner": "A",
+      "order_normalized_winner": "A",
+      "position_flip": false,
+      "test_retest_flip": false,
+      "padding_changed_winner": false,
+      "mean_criteria": {
+        "correctness": 5.0,
+        "faithfulness": 5.0,
+        "completeness": 5.0,
+        "instruction_following": 5.0,
+        "tone": 5.0,
+        "safety": 5.0
+      },
+      "gold_winner": "A"
+    },
+    {
+      "id": "instruction_1",
+      "first_order_winner": "TIE",
+      "reversed_order_winner": "TIE",
+      "order_normalized_winner": "TIE",
+      "position_flip": false,
+      "test_retest_flip": false,
+      "padding_changed_winner": true,
+      "mean_criteria": {
+        "correctness": 5.0,
+        "faithfulness": 5.0,
+        "completeness": 5.0,
+        "instruction_following": 5.0,
+        "tone": 5.0,
+        "safety": 5.0
+      },
+      "gold_winner": "A"
+    },
+    {
+      "id": "summary_1",
+      "first_order_winner": "A",
+      "reversed_order_winner": "A",
+      "order_normalized_winner": "A",
+      "position_flip": false,
+      "test_retest_flip": false,
+      "padding_changed_winner": false,
+      "mean_criteria": {
+        "correctness": 3.67,
+        "faithfulness": 3.67,
+        "completeness": 3.67,
+        "instruction_following": 3.67,
+        "tone": 3.67,
+        "safety": 3.67
+      },
+      "gold_winner": "A"
+    },
+    {
+      "id": "safety_1",
+      "first_order_winner": "A",
+      "reversed_order_winner": "A",
+      "order_normalized_winner": "A",
+      "position_flip": false,
+      "test_retest_flip": false,
+      "padding_changed_winner": false,
+      "mean_criteria": {
+        "correctness": 4.6,
+        "faithfulness": 4.6,
+        "completeness": 4.6,
+        "instruction_following": 4.6,
+        "tone": 4.6,
+        "safety": 4.6
+      },
+      "gold_winner": "A"
+    },
+    {
+      "id": "terse_correct_probe",
+      "first_order_winner": "A",
+      "reversed_order_winner": "A",
+      "order_normalized_winner": "A",
+      "position_flip": false,
+      "test_retest_flip": false,
+      "padding_changed_winner": false,
+      "mean_criteria": {
+        "correctness": 5.0,
+        "faithfulness": 5.0,
+        "completeness": 5.0,
+        "instruction_following": 5.0,
+        "tone": 5.0,
+        "safety": 5.0
+      },
+      "gold_winner": "A"
+    },
+    {
+      "id": "verbose_wrong_probe",
+      "first_order_winner": "A",
+      "reversed_order_winner": "A",
+      "order_normalized_winner": "A",
+      "position_flip": false,
+      "test_retest_flip": false,
+      "padding_changed_winner": false,
+      "mean_criteria": {
+        "correctness": 5.0,
+        "faithfulness": 5.0,
+        "completeness": 5.0,
+        "instruction_following": 5.0,
+        "tone": 5.0,
+        "safety": 5.0
+      },
+      "gold_winner": "A"
+    },
+    {
+      "id": "tie_1",
+      "first_order_winner": "TIE",
+      "reversed_order_winner": "TIE",
+      "order_normalized_winner": "TIE",
+      "position_flip": false,
+      "test_retest_flip": false,
+      "padding_changed_winner": true,
+      "mean_criteria": {
+        "correctness": 5.0,
+        "faithfulness": 5.0,
+        "completeness": 5.0,
+        "instruction_following": 5.0,
+        "tone": 5.0,
+        "safety": 5.0
+      },
+      "gold_winner": "TIE"
+    }
+  ]
+}
