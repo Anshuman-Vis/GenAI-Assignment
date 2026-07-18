@@ -1,4 +1,31 @@
 # GenAI-Assignment
+
+```mermaid
+flowchart TD
+    A["PDF / HTML / Markdown corpus"] --> B["Ingestion"]
+    B --> C["Text extraction"]
+    C --> D["Chunking<br/>default: 700 characters<br/>overlap: 120 characters"]
+    D --> E["Embedding<br/>sentence-transformers/all-MiniLM-L6-v2<br/>384 dimensions"]
+    E --> F["FAISS IndexFlatIP<br/>vectors + metadata"]
+    F --> G["Persisted index.faiss + chunks.json"]
+
+    H["POST /ask<br/>question, k, optional filters"] --> I["Embed query"]
+    I --> J["Top-k FAISS retrieval"]
+    J --> K["Metadata filter<br/>source_type / topic / source"]
+    K --> L{"Relevant context?<br/>top score ≥ 0.25"}
+    L -->|No| M["Return: no relevant context<br/>No generated answer / no hallucination"]
+    L -->|Yes| N["Grounded answer generation<br/>OpenAI gpt-4o-mini when API key exists<br/>extractive fallback otherwise"]
+    N --> O["Answer with chunk-ID citations<br/>+ latency, chunk count, token usage"]
+    F --> J
+```
+
+
+
+
+
+
+
+
 ```mermaid
 flowchart TD
     A["JSON test suite<br/>input, system prompt, reference,<br/>A output, B output, criteria"] --> B["Load test cases"]
